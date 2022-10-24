@@ -14,8 +14,8 @@ public class IngressoPista extends Ingresso {
     }
 
     //Método Construtor inserindo dados
-    public IngressoPista(String nome, int idade, String cpf, String email, String sexo) {
-        super(nome, idade, cpf, email, sexo);
+    public IngressoPista(String nome, int idade, long cpf, long phone, String sexo) {
+        super(nome, idade, cpf, phone, sexo);
     }
     
 
@@ -45,6 +45,7 @@ public class IngressoPista extends Ingresso {
         return  "Tipo: Pista" + "\n"
                 + "Nome: " + this.getNome() + "\n"
                 + "CPF: " + this.getCpf() + "\n"
+                + "Telefone: " + this.getPhone() + "\n"
                 + "----------------------------" + "\n";
     }
 
@@ -57,7 +58,7 @@ public class IngressoPista extends Ingresso {
     }
 
     //Read
-    public IngressoPista buscarIngressoPistaBD(String cpf) { //procura um objeto no BD pelo seu CPF, retorna o seu indice (posição)
+    public IngressoPista buscarIngressoPistaBD(long cpf) { //procura um objeto no BD pelo seu CPF, retorna o seu indice (posição)
                                                                 //dps retorna o objeto na posição encontrada
         int indice = IngressoPistaDAO.getIngressoPista(cpf);
         return IngressoPistaDAO.listaIngresso.get(indice);
@@ -68,14 +69,14 @@ public class IngressoPista extends Ingresso {
     }
     
     //Update
-    public boolean alterarIngressoPistaBD (String nome, int idade, String cpf, String email, String sexo){
-        IngressoPista a = new IngressoPista(nome, idade, cpf, email, sexo);
+    public boolean alterarIngressoPistaBD (String nome, int idade, long cpf, long phone, String sexo){
+        IngressoPista a = new IngressoPista(nome, idade, cpf, phone, sexo);
         IngressoPistaDAO.listaIngresso.add(a);
         return true;
     }
     
     //Delete
-    public boolean apagarIngressoPistaBD (String cpf){
+    public boolean apagarIngressoPistaBD (long cpf){
         IngressoPistaDAO.listaIngresso.remove(IngressoPistaDAO.getIngressoPista(cpf));
         return true;
     }

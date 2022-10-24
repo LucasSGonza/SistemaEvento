@@ -12,11 +12,11 @@ public abstract class IngressoPistaDAO { //Ingresso funciona como Pessoa (possui
     
     
     //Método para procurar objeto no BD
-    public static int getIngressoPista(String cpf) {
+    public static int getIngressoPista(long cpf) {
         
         int indice = 0;
         for (int i = 0; i < IngressoPistaDAO.listaIngresso.size(); i++) {
-            if (IngressoPistaDAO.listaIngresso.toString().equalsIgnoreCase(cpf)) {
+            if (IngressoPistaDAO.listaIngresso.get(i).getCpf() == cpf) {
                 indice = i;
                 return indice;
             }

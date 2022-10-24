@@ -1,3 +1,4 @@
+/*
 package Model;
 
 public class IngressoCamarote extends Ingresso {
@@ -48,3 +49,4 @@ public class IngressoCamarote extends Ingresso {
     }
 
 }
+*/

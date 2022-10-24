@@ -39,8 +39,8 @@ public class TelaIngressoPista extends javax.swing.JFrame {
         jLabel_idade = new javax.swing.JLabel();
         textField_cpf = new java.awt.TextField();
         jLabel_cpf = new javax.swing.JLabel();
-        jLabel_email = new javax.swing.JLabel();
-        textField_email = new java.awt.TextField();
+        jLabel_phone = new javax.swing.JLabel();
+        textField_phone = new java.awt.TextField();
         textField_idade = new java.awt.TextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -69,9 +69,9 @@ public class TelaIngressoPista extends javax.swing.JFrame {
 
         jLabel_cpf.setText("CPF:");
 
-        jLabel_email.setText("e-mail:");
+        jLabel_phone.setText("telefone");
 
-        textField_email.setText("");
+        textField_phone.setText("");
 
         textField_idade.setText("");
 
@@ -111,30 +111,28 @@ public class TelaIngressoPista extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel_nome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19)
-                        .addComponent(textField_nome, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel_idade, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19)
-                        .addComponent(textField_idade, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel_email)
-                                .addGap(19, 19, 19)
-                                .addComponent(textField_email, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel_cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(19, 19, 19)
-                                .addComponent(textField_cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_nome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(textField_nome, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_idade, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(textField_idade, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(textField_cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel_phone, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textField_phone, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(23, 23, 23)
@@ -146,11 +144,8 @@ public class TelaIngressoPista extends javax.swing.JFrame {
                                     .addComponent(jButton1))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel2)
-                                    .addGap(201, 201, 201)))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                                    .addGap(201, 201, 201))))))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,26 +154,24 @@ public class TelaIngressoPista extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(jLabel_nome))
                     .addComponent(textField_nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel_idade))
+                    .addComponent(jLabel_idade)
                     .addComponent(textField_idade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(jLabel_cpf))
                     .addComponent(textField_cpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_email)
-                    .addComponent(textField_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel_phone)
+                    .addComponent(textField_phone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -209,16 +202,17 @@ public class TelaIngressoPista extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+
         try {
 
-            String nome = "";
-            String cpf = "";
-            int idade = 0;
-            String email = "";
+            String nome;
+            long cpf;
+            int idade;
+            long phone;
             String sexo = "";
 
-            int masc = 0; //para pegar no JComboBox (é uma matriz, ent cada elemento tem uma posição pré definida)
-            int fem = 1;
+            String masc = "Masculino";
+            String fem = "Feminino";
 
             /*pede uma confirmação dos dados
         int confirm = showConfirmDialog(null, "Deseja confirmar a solicitação de compra? \n Dados: \n"
@@ -236,76 +230,89 @@ public class TelaIngressoPista extends javax.swing.JFrame {
             } else {
                 //adiciona o dado a uma variavel (que dps sera utilizada para o cadastro)
                 nome = this.textField_nome.getText();
-            }
 
-            if (textField_idade.getText().length() <= 1) { //verifica o tamanho (2 caracteres)
-                showMessageDialog(null, "Idade deve ter no mínimo 2 caracteres! \n"
-                        + "(alem de ser maior que 18 obvio kkk)");//fazer uma verificação de idade apos transformar o valor em int
-            } else {
-                //adiciona o dado a uma variavel (que dps sera utilizada para o cadastro)
-                idade = Integer.parseInt(this.textField_idade.getText());
-            }
-
-            if (textField_cpf.getText().length() != 11) { //deve conter 11 dígitos exatos
-                showMessageDialog(null, "Preencha o campo 'Cpf' somente com números"
-                        + "(11 dígitos, somente números)");
-            } else {
-                //adiciona o dado a uma variavel (que dps sera utilizada para o cadastro)
-                cpf = this.textField_cpf.getText();
-            }
-
-            //adiciona o dado 'email' a uma variavel (que dps sera utilizada para o cadastro)
-            email = this.textField_email.getText();
-
-            if (jComboBox2.getItemAt(masc).equalsIgnoreCase("Masculino")) {
-                //adiciona o dado 'masculino' a uma variavel (que dps sera utilizada para o cadastro)
-                sexo = "Masculino";
-            } else if (jComboBox2.getItemAt(fem).equalsIgnoreCase("Feminino")) {
-                //adiciona o dado 'feminino' a uma variavel (que dps sera utilizada para o cadastro)
-                sexo = "Feminino";
-            }
-
-            /* adiciona o dado 'qtde. ingressos' a uma variavel (que dps sera utilizada para o cadastro) 
-             serve para registrar a quantidade de ingressos em si, além de somar no valor final do pedido */
-            int qtdIngresso = Integer.parseInt(this.textField1_qtdeIngresso.getText());
-            double valorSexo = 0;
-
-            if (sexo.equalsIgnoreCase("Masculino")) {
-                valorSexo = 70;
-            } else if (sexo.equalsIgnoreCase("Feminino")) {
-                valorSexo = 60;
-            }
-
-            double valor = qtdIngresso * valorSexo;
-
-            //informa o valor total da compra e faz mais uma confirmação
-            int confirm2 = showConfirmDialog(null, "Deseja confirmar a compra?" + "\n"
-                    + "Valor: R$" + valor,
-                    "AVISO!", YES_NO_OPTION);
-
-            //realiza a compra e efetua o cadastro no bd
-            if (confirm2 == YES_OPTION) {
-                if (c.cadastrarIngressoPista(nome, idade, cpf, email, sexo) == true) {
-                    showMessageDialog(null, "Compra efetuada com sucesso! \n Te esperamos no evento!");
-                    System.out.println(c.getMinhaLista().toString());
+                if (textField_idade.getText().length() <= 1) { //verifica o tamanho (2 caracteres)
+                    showMessageDialog(null, "Idade deve ter no mínimo 2 caracteres! \n"
+                            + "(alem de ser maior que 18 obvio kkk)");
+                    //fazer uma verificação de idade apos transformar o valor em int
                 } else {
-                    showMessageDialog(null, "ERRO! \n Verifique os dados e tente novamente!");
+                    //adiciona o dado a uma variavel (que dps sera utilizada para o cadastro)
+                    idade = Integer.parseInt(this.textField_idade.getText());
+
+                    if (textField_cpf.getText().length() != 11) { //deve conter 11 dígitos exatos
+                        showMessageDialog(null, "Preencha o campo 'Cpf' somente com números + \n"
+                                + "(11 dígitos)");
+                    } else {
+                        //adiciona o dado 'cpf' a uma variavel (que dps sera utilizada para o cadastro)
+                        cpf = Long.parseLong(this.textField_cpf.getText());
+
+                        //adiciona o dado 'telefone' a uma variavel (que dps sera utilizada para o cadastro)
+                        if (this.textField_phone.getText().length() != 11) {
+                            showMessageDialog(null, "Preencha o campo Telefone com DDD + 9 dígitos");
+                        } else {
+                            phone = Long.parseLong(this.textField_phone.getText());
+
+                            if (jComboBox2.getSelectedItem().equals(masc)) {
+                                sexo = "Masculino";
+                            } else if (jComboBox2.getSelectedItem().equals(fem)) {
+                                sexo = "Feminino";
+                            }
+
+                            /* adiciona o dado 'qtde. ingressos' a uma variavel (que dps sera utilizada para o cadastro) 
+             serve para registrar a quantidade de ingressos em si, além de somar no valor final do pedido */
+                            if (this.textField1_qtdeIngresso.getText().equalsIgnoreCase("")) {
+                                showMessageDialog(null, "Por favor, digite a quantidade de ingressos que deseja comprar");
+                            } else {
+                                int qtdIngresso = Integer.parseInt(this.textField1_qtdeIngresso.getText());
+                                double valorSexo = 0;
+
+                                if (sexo.equalsIgnoreCase("Masculino")) {
+                                    valorSexo = 70;
+                                } else if (sexo.equalsIgnoreCase("Feminino")) {
+                                    valorSexo = 60;
+                                }
+
+                                double valor = qtdIngresso * valorSexo;
+
+                                //informa o valor total da compra e faz mais uma confirmação
+                                int confirm2 = showConfirmDialog(null, "Deseja confirmar a compra?" + "\n"
+                                        + "Valor: R$" + valor,
+                                        "AVISO!", YES_NO_OPTION);
+
+                                //realiza a compra e efetua o cadastro no bd
+                                if (confirm2 == YES_OPTION) {
+
+                                    if (idade < 18) {
+                                        showMessageDialog(null, "Você deve ter mais de 18 anos para ir ao evento!");
+                                    } else if (c.cadastrarIngressoPista(nome, idade, cpf, phone, sexo) == true) {
+                                        showMessageDialog(null, "Compra efetuada com sucesso! \n Te esperamos no evento!");
+                                        System.out.println(c.getMinhaLista().toString());
+
+                                        this.textField_nome.setText("");
+                                        this.textField_idade.setText("");
+                                        this.textField_cpf.setText("");
+                                        this.textField_phone.setText("");
+                                        this.textField1_qtdeIngresso.setText("");
+                                        this.jComboBox2.removeAllItems();
+                                        this.jComboBox2.addItem("Masculino");
+                                        this.jComboBox2.addItem("Feminino");
+
+                                    } else {
+                                        showMessageDialog(null, "ERRO! \n Verifique os dados e tente novamente!");
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
                 }
-
             }
-
-            this.textField_nome.setText("");
-            this.textField_idade.setText("");
-            this.textField_cpf.setText("");
-            this.textField_email.setText("");
-            this.textField1_qtdeIngresso.setText("");
-            this.jComboBox2.removeAllItems();
-            this.jComboBox2.addItem("Masculino");
-            this.jComboBox2.addItem("Feminino");
 
             // se clicar em "Não" foda-se, nao precisa fazer nada (e não irá fazer, pois os dados só são enviados se clicar em "Sim")
         } catch (NumberFormatException a) {
-            showMessageDialog(null, "Por favor, defina a quantidade de Ingressos que será (ão) comprados");
+            showMessageDialog(null, "Por favor, verifique se você inseriu somente números nos campos: \n"
+                    + "   CPF, TELEFONE, QUANTIDADE");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -356,13 +363,13 @@ public class TelaIngressoPista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel_cpf;
-    private javax.swing.JLabel jLabel_email;
     private javax.swing.JLabel jLabel_idade;
     private javax.swing.JLabel jLabel_nome;
+    private javax.swing.JLabel jLabel_phone;
     private java.awt.TextField textField1_qtdeIngresso;
     private java.awt.TextField textField_cpf;
-    private java.awt.TextField textField_email;
     private java.awt.TextField textField_idade;
     private java.awt.TextField textField_nome;
+    private java.awt.TextField textField_phone;
     // End of variables declaration//GEN-END:variables
 }

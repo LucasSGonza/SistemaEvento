@@ -16,8 +16,8 @@ public class IngressoPistaControl {
     
     
     //Create
-    public boolean cadastrarIngressoPista(String n, int i, String c, String e, String s) { //nome, idade, cpf, email, sexo, evento
-        IngressoPista a = new IngressoPista(n, i, c, e, s);
+    public boolean cadastrarIngressoPista(String n, int i, long c, long p, String s) { //nome, idade, cpf, email, sexo, evento
+        IngressoPista a = new IngressoPista(n, i, c, p, s);
         if (controlPista.inserirIngressoPistaBD(a) == true) {//metodo no Model para inserir no BD com esses dados do VIEW
             return true;
         } else {
@@ -27,7 +27,7 @@ public class IngressoPistaControl {
     }
     
     //Read
-    public IngressoPista carregarIngressoPista(String cpf) {
+    public IngressoPista carregarIngressoPista(long cpf) {
        return controlPista.buscarIngressoPistaBD(cpf);
     }
     
@@ -36,13 +36,13 @@ public class IngressoPistaControl {
     }
     
     //Update
-    public boolean atualizarIngressoPista (String nome, int idade, String cpf, String email, String sexo){
-        controlPista.alterarIngressoPistaBD(nome, idade, cpf, email, sexo);
+    public boolean atualizarIngressoPista (String nome, int idade, long cpf, long phone, String sexo){
+        controlPista.alterarIngressoPistaBD(nome, idade, cpf, phone, sexo);
         return true;
     }
     
     //Delete
-    public boolean deletarIngressoPista (String cpf){
+    public boolean deletarIngressoPista (long cpf){
         if (controlPista.apagarIngressoPistaBD(cpf) == true){           
             return true;
         } else {

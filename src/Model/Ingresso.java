@@ -4,8 +4,8 @@ public abstract class Ingresso {
     
     private String nome;
     private int idade;
-    private String cpf;
-    private String email;
+    private long cpf;
+    private long phone;
     private String sexo;
     //private Evento e;
     
@@ -14,9 +14,9 @@ public abstract class Ingresso {
         
     }
     
-    public Ingresso (String nome, int idade,String cpf, String email, String sexo){ 
+    public Ingresso (String nome, int idade, long cpf, long phone, String sexo){ 
         this.sexo = sexo;                        
-        this.email = email;                              
+        this.phone = phone;                              
         this.nome = nome;
         this.cpf = cpf;
         this.idade = idade;
@@ -32,15 +32,23 @@ public abstract class Ingresso {
     }
     
     
-    public void setCpf (String c){
+    public void setCpf (long c){
         this.cpf = c;
     }
     
-    public String getCpf(){
+    public long getCpf(){
         return cpf;
     }
     
-                  
+    public void setPhone(long phone){
+        this.phone = phone;
+    }
+    
+    public long getPhone(){
+        return this.phone;
+    }
+    
+    
     public abstract String imprimirValor (Evento e); //junção do método para cálcular valor do ingresso + mostrar tipo e valor do ingresso
        
 }
